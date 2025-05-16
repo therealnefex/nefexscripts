@@ -48,12 +48,9 @@
       font-weight: bold;
       transition: color 0.3s;
     }
-    nav a:hover {
-      color: #ff00c8;
-    }
+    nav a:hover,
     nav a.active {
       color: #ff00c8;
-      font-weight: 900;
     }
     .content {
       max-width: 1000px;
@@ -81,15 +78,18 @@
       border-color: #ff00c8;
     }
     .script-box h3 {
-      margin: 0 0 10px;
+      margin-top: 0;
       color: #00ffe1;
     }
-    .script-box pre {
-      background: #000;
-      color: #00ffe1;
+    code {
+      display: block;
+      background: #111;
       padding: 15px;
-      border-radius: 8px;
+      border-radius: 5px;
+      white-space: pre-wrap;
       overflow-x: auto;
+      color: #00ff88;
+      font-family: monospace;
     }
     footer {
       text-align: center;
@@ -104,34 +104,76 @@
 
   <header>
     <h1>therealnefex</h1>
-    <p>🔥 Roblox Exploits | Scripts | Tutorials 🔥</p>
+    <p>🔥 Roblox Scripts | Exploits | Tutorials 🔥</p>
   </header>
 
   <nav>
-    <a href="https://therealnefex.github.io/nefexscripts/">Home</a>
-    <a href="https://therealnefex.github.io/nefexscripts/scripts/" class="active">Scripts</a>
-    <a href="https://therealnefex.github.io/nefexscripts/exploits/">Exploits</a>
-    <a href="https://www.youtube.com/@therealnefex" target="_blank" rel="noopener noreferrer">YouTube</a>
-    <a href="#contact">Contact</a>
+    <a href="/">Home</a>
+    <a href="/nefexscripts/scripts/" class="active">Scripts</a>
+    <a href="/nefexscripts/exploits/">Exploits</a>
   </nav>
 
   <section class="content">
-    <h2>📜 Roblox Scripts</h2>
+    <h2>💰 The Storage INF Money</h2>
 
     <div class="script-box">
-      <h3>📷 Camera Script</h3>
-      <pre>
-// Put this in a LocalScript inside StarterPlayerScripts
+      <h3>🎮 Game: The Storage</h3>
+      <code>
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local Window = Library:NewWindow("Script")
 
-local camera = workspace.CurrentCamera
-camera.CameraType = Enum.CameraType.Scriptable
-camera.CFrame = CFrame.new(Vector3.new(0, 10, -20), Vector3.new(0, 5, 0))
-      </pre>
+local Tab = Window:NewSection("Credits: TGMANKASKE")
+
+Tab:CreateButton("Get Money", function()
+
+local function roll()
+    local args = {[1] = "PremRollSkin10"}
+    game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
+end
+
+local function sell()
+    local skins = {
+        "Hot Pink", "Agent", "Checkered", "Grey Camo", "Rusted Red",
+        "Green Camo", "Orange Crush", "Painted Yellow", "Painted Orange",
+        "Damaged", "Earth", "Painted Blue", "Painted Green", "Painted Red", 
+        "Painted Pink", "Painted Purple", "Green Sentry", "Pink Sentry", 
+        "Red Sentry", "Royal", "Fallen Agent"
+    }
+    local guns = {"SMG", "LMG", "Double Barrel Shotgun", "Revolver", "AK47", "Turret", "Shotgun"}
+
+    for _, g in ipairs(guns) do
+        for _, s in ipairs(skins) do
+            local evArgs = {"SellSkin", g, s}
+            game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(evArgs))
+            game:GetService("ReplicatedStorage").RemoteEvent:FireServer(unpack(evArgs))
+        end
+    end
+end
+
+sell()
+roll()
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    roll()
+end)
+
+end)
+
+Tab:CreateButton("Rejoin for more", function()
+    local player = game.Players.LocalPlayer
+    local gamePlaceId = game.PlaceId
+    game:GetService("TeleportService"):Teleport(gamePlaceId, player)
+end)
+
+local Tab = Window:NewSection("Links")
+Tab:CreateButton("Discord Group", function()
+    setclipboard("https://discord.gg/8A6k73JqCM")
+end)
+      </code>
     </div>
-
   </section>
 
-  <footer id="contact">
+  <footer>
     <p>Made by therealnefex | © 2025</p>
     <p>📧 Email: nefexscripts@gmail.com</p>
   </footer>
