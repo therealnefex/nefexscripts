@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Scripts | therealnefex Roblox Hub</title>
+  <title>therealnefex | Scripts</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     * {
@@ -20,11 +20,6 @@
       background: linear-gradient(90deg, #00ffe1, #0051ff);
       padding: 40px 20px;
       text-align: center;
-      animation: slideDown 1s ease-out;
-    }
-    @keyframes slideDown {
-      from { transform: translateY(-100px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
     }
     header h1 {
       font-family: 'Orbitron', sans-serif;
@@ -56,6 +51,10 @@
     nav a:hover {
       color: #ff00c8;
     }
+    nav a.active {
+      color: #ff00c8;
+      font-weight: 900;
+    }
     .content {
       max-width: 1000px;
       margin: auto;
@@ -82,32 +81,15 @@
       border-color: #ff00c8;
     }
     .script-box h3 {
-      margin-top: 0;
+      margin: 0 0 10px;
       color: #00ffe1;
     }
-    code {
-      display: block;
-      background: #111;
+    .script-box pre {
+      background: #000;
+      color: #00ffe1;
       padding: 15px;
-      border-radius: 5px;
-      white-space: pre-wrap;
+      border-radius: 8px;
       overflow-x: auto;
-      color: #00ff88;
-      font-family: monospace;
-    }
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
-      background: linear-gradient(45deg, #00ffe1, #ff00c8);
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-      transition: transform 0.3s ease;
-      margin-top: 20px;
-    }
-    .button:hover {
-      transform: scale(1.05);
     }
     footer {
       text-align: center;
@@ -122,42 +104,31 @@
 
   <header>
     <h1>therealnefex</h1>
-    <p>🔥 Roblox Scripts | Exploits | Tutorials 🔥</p>
+    <p>🔥 Roblox Exploits | Scripts | Tutorials 🔥</p>
   </header>
 
   <nav>
-    <a href="https://therealnefex.github.io/nefexscripts/" >Home</a>
-    <a href="https://therealnefex.github.io/nefexscripts/scripts/" style="color:#ff00c8; font-weight: 900;">Scripts</a>
+    <a href="https://therealnefex.github.io/nefexscripts/">Home</a>
+    <a href="https://therealnefex.github.io/nefexscripts/scripts/" class="active">Scripts</a>
     <a href="https://therealnefex.github.io/nefexscripts/exploits/">Exploits</a>
     <a href="https://www.youtube.com/@therealnefex" target="_blank" rel="noopener noreferrer">YouTube</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section class="content">
-    <h2>🚀 Featured Roblox Scripts</h2>
+    <h2>📜 Roblox Scripts</h2>
 
     <div class="script-box">
-      <h3>🧠 Auto Farm Script</h3>
-      <code>
--- Auto Farm Script
-while true do
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Coins:GetChildren()[1].CFrame
-    wait(0.5)
-end
-      </code>
+      <h3>📷 Camera Script</h3>
+      <pre>
+// Put this in a LocalScript inside StarterPlayerScripts
+
+local camera = workspace.CurrentCamera
+camera.CameraType = Enum.CameraType.Scriptable
+camera.CFrame = CFrame.new(Vector3.new(0, 10, -20), Vector3.new(0, 5, 0))
+      </pre>
     </div>
 
-    <div class="script-box">
-      <h3>🦅 Fly Script</h3>
-      <code>
--- Fly Script
-loadstring(game:HttpGet("https://pastebin.com/raw/YOURFLYSCRIPT"))()
-      </code>
-    </div>
-
-    <div style="text-align: center;">
-      <a class="button" href="https://www.youtube.com/@therealnefex" target="_blank" rel="noopener noreferrer">🎬 Watch Tutorials</a>
-    </div>
   </section>
 
   <footer id="contact">
