@@ -56,6 +56,10 @@
     nav a:hover {
       color: #ff00c8;
     }
+    nav a.active {
+      color: #ff00c8;
+      font-weight: 900;
+    }
     .content {
       max-width: 1000px;
       margin: auto;
@@ -68,6 +72,32 @@
       background: linear-gradient(to right, #00ffe1, #ff00c8);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    .script-box {
+      background: #1e1e1e;
+      border: 2px solid #00ffe1;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+    .script-box:hover {
+      transform: scale(1.02);
+      border-color: #ff00c8;
+    }
+    .script-box h3 {
+      margin-top: 0;
+      color: #00ffe1;
+    }
+    code {
+      display: block;
+      background: #111;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      color: #00ff88;
+      font-family: monospace;
     }
     .button {
       display: inline-block;
@@ -100,19 +130,21 @@
   </header>
 
   <nav>
-    <!-- Updated the Scripts link to your external URL -->
-    <a href="https://therealnefex.github.io/nefexscripts/scripts/" target="_blank" rel="noopener noreferrer">Scripts</a>
+    <a href="https://therealnefex.github.io/nefexscripts/" class="active">Home</a>
+    <a href="https://therealnefex.github.io/nefexscripts/scripts/">Scripts</a>
+    <a href="https://therealnefex.github.io/nefexscripts/exploits/">Exploits</a>
     <a href="https://www.youtube.com/@therealnefex" target="_blank" rel="noopener noreferrer">YouTube</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section class="content">
-    <h2>Welcome to the Hub</h2>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-      Discover the best Roblox scripts, tutorials, and exploits all in one place. Click on the Scripts button to check out the latest featured scripts.
+    <h2>Welcome to therealnefex</h2>
+    <p style="text-align:center; max-width:600px; margin:auto; font-size:1.2em; line-height:1.6;">
+      Your go-to hub for the best Roblox scripts, exploits, and tutorials. Dive into our featured scripts, explore our latest exploits, or catch up with our YouTube tutorials.
     </p>
-    <div style="text-align:center;">
-      <a class="button" href="https://therealnefex.github.io/nefexscripts/scripts/" target="_blank" rel="noopener noreferrer">View Scripts</a>
+    <div style="text-align:center; margin-top: 40px;">
+      <a class="button" href="https://therealnefex.github.io/nefexscripts/scripts/">🚀 View Scripts</a>
+      <a class="button" href="https://therealnefex.github.io/nefexscripts/exploits/" style="margin-left: 20px;">💥 Check Exploits</a>
     </div>
   </section>
 
