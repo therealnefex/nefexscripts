@@ -2,98 +2,177 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>therealnefex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>therealnefex | Roblox Scripts Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
     body {
-      background-color: #000;
-      color: #0f0;
-      font-family: monospace;
       margin: 0;
-      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
     }
-
     header {
-      background-color: #111;
-      color: #0ff;
-      padding: 20px;
+      background: linear-gradient(90deg, #00ffe1, #0051ff);
+      padding: 40px 20px;
       text-align: center;
-      font-size: 30px;
-      font-weight: bold;
-      border-bottom: 3px solid #0ff;
+      animation: slideDown 1s ease-out;
     }
-
+    @keyframes slideDown {
+      from { transform: translateY(-100px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3em;
+      margin: 0;
+      color: #000;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+      color: #111;
+    }
     nav {
+      background: #1b1b1b;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00ffe1;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff00c8;
+    }
+    .content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
       text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      background: linear-gradient(to right, #00ffe1, #ff00c8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .script-box {
+      background: #1e1e1e;
+      border: 2px solid #00ffe1;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: transform 0.3s;
+    }
+    .script-box:hover {
+      transform: scale(1.02);
+      border-color: #ff00c8;
+    }
+    .script-box h3 {
+      margin-top: 0;
+      color: #00ffe1;
+    }
+    code {
+      display: block;
+      background: #111;
+      padding: 15px;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      color: #00ff88;
+      font-family: monospace;
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(45deg, #00ffe1, #ff00c8);
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+      transition: transform 0.3s ease;
       margin-top: 20px;
     }
-
-    nav a {
-      color: #fff;
-      background-color: #333;
-      padding: 10px 20px;
-      margin: 5px;
-      text-decoration: none;
-      border: 2px solid #0ff;
-      display: inline-block;
+    .button:hover {
+      transform: scale(1.05);
     }
-
-    .script-box {
-      border: 2px solid #0ff;
-      background-color: #111;
-      padding: 20px;
-      margin: 20px 0;
-    }
-
-    .script-box h2 {
-      color: #0ff;
-      margin-top: 0;
-    }
-
-    pre {
-      background-color: #000;
-      padding: 10px;
-      color: #0f0;
-      overflow-x: auto;
-    }
-
     footer {
       text-align: center;
-      margin-top: 40px;
-      color: #666;
+      padding: 20px;
+      background: #141414;
+      font-size: 14px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-  <header>therealnefex</header>
+  <header>
+    <h1>therealnefex</h1>
+    <p>🔥 Roblox Scripts | Exploits | Tutorials 🔥</p>
+  </header>
 
   <nav>
-    <a href="#">Scripts</a>
-    <a href="#">Exploits</a>
-    <a href="#">Tutorials</a>
+    <a href="#scripts">Scripts</a>
+    <a href="https://www.youtube.com/@therealnefex" target="_blank">YouTube</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <div class="script-box">
-    <h2>Auto Farm Script</h2>
-    <pre>
+  <section class="content">
+    <h2 id="scripts">🚀 Featured Roblox Scripts</h2>
+
+    <div class="script-box">
+      <h3>🧠 Auto Farm Script</h3>
+      <code>
 -- Auto Farm Script
 while true do
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Coins:GetChildren()[1].CFrame
     wait(0.5)
 end
-    </pre>
-  </div>
+      </code>
+    </div>
 
-  <div class="script-box">
-    <h2>Fly Script</h2>
-    <pre>
+    <div class="script-box">
+      <h3>🦅 Fly Script</h3>
+      <code>
 -- Fly Script
 loadstring(game:HttpGet("https://pastebin.com/raw/YOURFLYSCRIPT"))()
-    </pre>
-  </div>
+      </code>
+    </div>
 
-  <footer>© 2025 therealnefex - All rights reserved</footer>
+    <div class="script-box">
+      <h3>⚔️ Kill All Script</h3>
+      <code>
+for i, v in pairs(game.Players:GetPlayers()) do
+    if v ~= game.Players.LocalPlayer then
+        game:GetService("ReplicatedStorage").Remotes.DamagePlayer:FireServer(v.Character)
+    end
+end
+      </code>
+    </div>
+
+    <div style="text-align: center;">
+      <a class="button" href="https://www.youtube.com/@therealnefex" target="_blank">🎬 Watch Tutorials</a>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Made by therealnefex | © 2025</p>
+    <p>📧 Email: nefexscripts@gmail.com</p>
+  </footer>
 
 </body>
 </html>
