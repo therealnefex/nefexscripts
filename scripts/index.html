@@ -1,35 +1,32 @@
-<h2 id="scripts">🚀 Roblox Scripts by therealnefex</h2>
+<section class="section" id="scripts">
+  <h2 class="section-title">📜 Roblox Scripts by therealnefex</h2>
 
-<div class="script-box">
-  <h3>🧠 Auto Farm Script</h3>
-  <code id="script1">
--- Auto Farm Script
-while true do
+  <div class="script-container">
+    
+    <div class="script-card">
+      <h3>🧠 Auto Farm Script</h3>
+      <pre><code id="script1">while true do
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Coins:GetChildren()[1].CFrame
     wait(0.5)
-end
-  </code>
-  <button class="copy-btn" onclick="copyScript('script1')">📋 Copy</button>
-</div>
+end</code></pre>
+      <button class="copy-btn" onclick="copyScript('script1')">📋 Copy</button>
+    </div>
 
-<div class="script-box">
-  <h3>🦅 Fly Script</h3>
-  <code id="script2">
--- Fly Script
-loadstring(game:HttpGet("https://pastebin.com/raw/YOURFLYSCRIPT"))()
-  </code>
-  <button class="copy-btn" onclick="copyScript('script2')">📋 Copy</button>
-</div>
+    <div class="script-card">
+      <h3>🦅 Fly Script</h3>
+      <pre><code id="script2">loadstring(game:HttpGet("https://pastebin.com/raw/YOURFLYSCRIPT"))()</code></pre>
+      <button class="copy-btn" onclick="copyScript('script2')">📋 Copy</button>
+    </div>
 
-<div class="script-box">
-  <h3>💥 Kill All Script</h3>
-  <code id="script3">
--- Kill All Script
-for _, player in pairs(game.Players:GetPlayers()) do
+    <div class="script-card">
+      <h3>💥 Kill All Script</h3>
+      <pre><code id="script3">for _, player in pairs(game.Players:GetPlayers()) do
     if player ~= game.Players.LocalPlayer then
         player.Character.Humanoid.Health = 0
     end
-end
-  </code>
-  <button class="copy-btn" onclick="copyScript('script3')">📋 Copy</button>
-</div>
+end</code></pre>
+      <button class="copy-btn" onclick="copyScript('script3')">📋 Copy</button>
+    </div>
+
+  </div>
+</section>
