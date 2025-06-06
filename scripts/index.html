@@ -104,15 +104,13 @@
 
   <header>
     <h1>therealnefex</h1>
-    <p>🔥 Roblox Scripts Hub 🔥</p>
+    <p>🔥 Roblox Scripts | Exploits | Tutorials 🔥</p>
   </header>
 
   <nav>
     <a href="https://therealnefex.github.io/nefexscripts/">Home</a>
-    <a href="https://therealnefex.github.io/nefexscripts/scripts/" class="active">Scripts</a>
-    <a href="https://therealnefex.github.io/nefexscripts/exploits/">Exploits</a>
-    <a href="https://www.youtube.com/@therealnefex" target="_blank" rel="noopener noreferrer">YouTube</a>
-    <a href="#contact">Contact</a>
+    <a href="/nefexscripts/scripts/" class="active">Scripts</a>
+    <a href="/nefexscripts/exploits/">Exploits</a>
   </nav>
 
   <section class="content">
@@ -126,7 +124,6 @@ local Window = Library:NewWindow("Script")
 local Tab = Window:NewSection("Credits: TGMANKASKE")
 
 Tab:CreateButton("Get Money", function()
-
 local function roll()
     local args = {[1] = "PremRollSkin10"}
     game:GetService("ReplicatedStorage").RemoteFunction:InvokeServer(unpack(args))
@@ -157,7 +154,6 @@ roll()
 game:GetService("RunService").Heartbeat:Connect(function()
     roll()
 end)
-
 end)
 
 Tab:CreateButton("Rejoin for more", function()
@@ -173,9 +169,9 @@ end)
       </code>
     </div>
 
-    <h2>🍕 Work at a Pizza Place</h2>
+    <h2>🍕 Work At Pizza Place</h2>
     <div class="script-box">
-      <h3>🎮 Game: Work at a Pizza Place</h3>
+      <h3>🎮 Game: Work At Pizza Place</h3>
       <code>
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/Hm5011/hussain/refs/heads/main/Work%20at%20a%20pizza%20place'),true))()
       </code>
@@ -188,9 +184,18 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/Hm5011/hussain/refs/
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a8f02a61fc38bf9256dd0f17be6b16d7.lua"))()
       </code>
     </div>
+
+    <h2>⚡ Speed Changer</h2>
+    <div class="script-box">
+      <h3>🎮 Game: Universal Speed Modifier</h3>
+      <code>
+loadstring(game:HttpGet("https://raw.githubusercontent.com/therealnefex/scripts-games/refs/heads/main/speed-changer1.lua"))()
+      </code>
+    </div>
+
   </section>
 
-  <footer id="contact">
+  <footer>
     <p>Made by therealnefex | © 2025</p>
     <p>📧 Email: nefexscripts@gmail.com</p>
   </footer>
